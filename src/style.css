@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 :root{
-    --colorBtn01: #e984b0;
-    --colorBtn02: #50d8e2;
+    --colorBtn02: #0d687c;
+    --colorBtn01: #3f5eab;
     --colorShadow: #fafafa;
-    --colorHoverBtn01:#ec3584c4;
-    --colorHoverBtn02:#00c1cfea;
+    /* --colorHoverBtn01:#ec3584c4;
+    --colorHoverBtn02:#00c1cfea; */
 }
 
 *{
@@ -23,7 +23,7 @@ body{
     align-items: center;
     padding: 20px;
     font-weight: 300;
-    
+    font-size: 16px;
 }
 
 /* Página bem-vindo */
@@ -54,7 +54,7 @@ body{
     font-weight: 400;
 }
 
-.icon{
+.icon {
     height: 50px;
 }
 
@@ -86,18 +86,20 @@ body{
     font-size: 18px;
     border-radius: 10px;
     border: none;
+    color: #fff;
 }
 
 .howItWorks .button:hover, .validator-container .button:hover{
     cursor: pointer;
-    background-image: linear-gradient(to right, var(--colorHoverBtn02), var(--colorHoverBtn01));
-    color: #fff;
+    background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
+    opacity: .8; /* altera a opacidade (esbranquiçado/claridade)*/
 }
 
 /* Página Validador Cartão*/
 
 .validator-container form {
     width: 80%;
+    padding-top: 160px;
 }
 
 .validator-container .inputBox label, .select-options label, span{
@@ -114,13 +116,13 @@ label, span{
     margin-top: 40px;
 }
 
-
 .validator-container .inputBox input, select{
     height: 40px;
     width: 100%;
     border-radius: 10px;
     border: 1px solid #999;
     color: #4b4b4b;
+    font-size: 16px;
     outline: none;
 }
 
@@ -135,4 +137,66 @@ label, span{
 
  .select-options label {
     display: block;
+}
+
+/* Cartão */
+
+.validator-container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 450px;
+}
+
+.validator-container .card-container .front-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(206, 206, 206, 0.815);
+    backface-visibility: hidden;
+    padding: 20px;
+}
+
+.img-chip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.validator-container .card-container .front-card .imagem-chip{
+    height: 70px;
+    width: 70px;
+}
+
+.validator-container .card-container .front-card .card-number{
+    padding: 10px 0px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.validator-container .card-container .front-card .flex-card, .mm-yy{
+    display: flex;
+    gap: 15px;
+}
+
+.validator-container .card-container .front-card .flex-card .card-name-field:nth-child(1){
+    margin-right: auto;
+}
+
+.validator-container .card-container .front-card .flex-card .card-name-field {
+    font-size: 16px;
+    color: #fff;
+}
+
+.validator-container .card-container .front-card .flex-card span{
+    color: #fff;
+}
+
+.mm-yy span{
+    margin-top: 0px;
 }
