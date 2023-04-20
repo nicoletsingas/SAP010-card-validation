@@ -1,12 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root{
+    --colorBtn01: #e984b0;
+    --colorBtn02: #50d8e2;
+    --colorShadow: #fafafa;
+    --colorHoverBtn01:#ec3584c4;
+    --colorHoverBtn02:#00c1cfea;
+}
+
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: 300;
+}
+/* Página bem-vindo */
+.welcome-container{
+    width: 850px;
+    box-shadow: 5px 5px 15px rgb(175, 175, 175);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /*muda a direção dos itens de dentro*/
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.welcome-container .title {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+    justify-content: center;
+     /* background-color: blue;
+    border-radius: 10px;*/
+}
+
+.welcome-container .title h1{
+    padding: 10px;
+    font-weight: 400;
+}
 
 .icon{
     height: 50px;
+}
+
+.howItWorks h2{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.howItWorks p{
+    margin-bottom: 10px;
+}
+
+.howItWorks .div-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.howItWorks  a{
+    text-decoration: none;
+    width: 60%;
+    
+}
+
+.howItWorks .button{
+    background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+.howItWorks .button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, var(--colorHoverBtn02), var(--colorHoverBtn01));
+    color: #fff;
 }
