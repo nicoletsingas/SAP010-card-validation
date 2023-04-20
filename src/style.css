@@ -8,7 +8,6 @@
     --colorHoverBtn02:#00c1cfea;
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -24,9 +23,12 @@ body{
     align-items: center;
     padding: 20px;
     font-weight: 300;
+    
 }
+
 /* Página bem-vindo */
-.welcome-container{
+
+.welcome-container, .validator-container{
     width: 850px;
     box-shadow: 5px 5px 15px rgb(175, 175, 175);
     border-radius: 10px;
@@ -75,21 +77,62 @@ body{
 .howItWorks  a{
     text-decoration: none;
     width: 60%;
-    
 }
 
-.howItWorks .button{
+.howItWorks .button, .validator-container .button{
     background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
     height: 50px;
     width: 100%;
     font-size: 18px;
     border-radius: 10px;
     border: none;
-    
 }
 
-.howItWorks .button:hover{
+.howItWorks .button:hover, .validator-container .button:hover{
     cursor: pointer;
     background-image: linear-gradient(to right, var(--colorHoverBtn02), var(--colorHoverBtn01));
     color: #fff;
+}
+
+/* Página Validador Cartão*/
+
+.validator-container form {
+    width: 80%;
+}
+
+.validator-container .inputBox label, .select-options label, span{
+    color: #999;
+    margin-bottom: 5px;
+    display: block;
+}
+
+label, span{
+    margin-top: 20px;
+}
+
+.validator-container .button{
+    margin-top: 40px;
+}
+
+
+.validator-container .inputBox input, select{
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #999;
+    color: #4b4b4b;
+    outline: none;
+}
+
+.validator-container form .flex-container{ 
+    display: flex; 
+    gap: 15px; 
+}
+
+.validator-container form .flex-container .select-options{
+    flex: 1 1 150px; /* 1 fração para cada elemento e o resto 150px*/
+}
+
+ .select-options label {
+    display: block;
 }

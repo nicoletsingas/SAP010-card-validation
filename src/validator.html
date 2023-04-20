@@ -9,44 +9,51 @@
 </head>
 <body>
     <script src="index.js" type="module"></script>
-    <div class="container">
+    <div class="validator-container">
         <form action="">
             <div class="inputBox">
-                <label for="card-number">Numero do Cartão:</label> <br>
-                <input type="text" maxlength="16" class="card-input" id="card-number">
+                <label for="card-number">Numero do Cartão:</label>
+                <input type="text" required maxlength="16" class="card-input" id="card-number">
             </div>
             <div class="inputBox">
-                <label for="card-name">Nome no Cartão:</label> <br>
-                <input type="text" maxlength="30" class="card-input" id="card-name">
+                <label for="card-name">Nome no Cartão:</label>
+                <input type="text" required maxlength="30" class="card-input" id="card-name">
             </div>
-            <div class="inputBox" id="expiration-date">
-                <label for="">Data de expiração:</label>
-                <select id="mounths">
-                    <option value="01">Janeiro</option>
-                    <option value="02">Fevereiro</option>
-                    <option value="03">Março</option>
-                    <option value="04">Abril</option>
-                    <option value="05">Maio</option>
-                    <option value="06">Junho</option>
-                    <option value="07">Julho</option>
-                    <option value="08">Agosto</option>
-                    <option value="09">Setembro</option>
-                    <option value="10">Outubro</option>
-                    <option value="11">Novembro</option>
-                    <option value="12">Dezembro</option>
-                </select>
-                <select id="years">
-                    <option value="23">2023</option>
-                    <option value="24">2024</option>
-                    <option value="25">2025</option>
-                    <option value="26">2026</option>
-                    <option value="27">2027</option>
-                    <option value="28">2028</option>
-                </select>
-            </div>
-            <div class="inputBox">
-                <label for="cvv-card">CVV:</label> <br>
-                <input type="text" maxlength="4" class="card-cvv" id="cvv-card">
+            <div class="flex-container">
+                <div class="select-options" id="expiration-mounth">
+                    <span>Data Mês</span>
+                    <select name="" id="mounths">
+                        <option value="01">Janeiro</option>
+                        <option value="02">Fevereiro</option>
+                        <option value="03">Março</option>
+                        <option value="04">Abril</option>
+                        <option value="05">Maio</option>
+                        <option value="06">Junho</option>
+                        <option value="07">Julho</option>
+                        <option value="08">Agosto</option>
+                        <option value="09">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+                <div class="select-options" id="expiration-year">
+                    <span>Data Ano</span>
+                    <select id="years">
+                        <option value="23">2023</option>
+                        <option value="24">2024</option>
+                        <option value="25">2025</option>
+                        <option value="26">2026</option>
+                        <option value="27">2027</option>
+                        <option value="28">2028</option>
+                        <option value="29">2029</option>
+                        <option value="30">2030</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <label for="cvv-card">CVV:</label> 
+                    <input type="text" required maxlength="4" class="card-input" id="cvv-card">
+                </div>
             </div>
             <button id="btn-validator-card" class="button">Verificar Cartão</button>
         </form>
