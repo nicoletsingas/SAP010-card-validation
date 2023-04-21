@@ -159,6 +159,7 @@ label, span{
     box-shadow: 10px 10px 20px rgba(206, 206, 206, 0.815);
     backface-visibility: hidden;
     padding: 20px;
+    text-transform: uppercase;
 }
 
 .img-chip{

@@ -15,40 +15,38 @@
                 <div class="img-chip">
                     <img src="assets/chip.png" class="imagem-chip" alt="imagem de um chip">
                 </div>
-                <div class="card-number">****************</div>
+                <div class="card-number" id="">****************</div>
                 <div class="flex-card">
                     <div class="card-name-field">
                         <span>Nome no cartão</span>
-                        <div class="full-name">Nome completo</div>
+                        <div id="full-name-card">Nome completo</div>
                     </div>
                     <div class="expiration-data">
                         <span>Data de expiração</span>
                         <div class="mm-yy">
-                            <span class="exp-mm">mm</span>
-                            <span class="exp-yy">yy</span>
+                            <span id="exp-mm">mm</span>
+                            <span id="exp-yy">yy</span>
                         </div>
                 </div>
                 </div>
             </div>
-
             <div class="back-card">
 
             </div>
         </div>
-
         <form action="">
             <div class="inputBox">
                 <label for="card-number">Numero do Cartão:</label>
-                <input type="text" required maxlength="16" class="card-input" id="card-number">
+                <input type="text" required maxlength="16" class="card-input" id="card-number-input">
             </div>
             <div class="inputBox">
                 <label for="card-name">Nome no Cartão:</label>
-                <input type="text" required maxlength="30" class="card-input" id="card-name">
+                <input type="text" required maxlength="30" class="card-input" id="card-name-input">
             </div>
             <div class="flex-container">
                 <div class="select-options" id="expiration-mounth">
                     <span>Data Mês</span>
-                    <select name="" id="mounths">
+                    <select id="mounths">
                         <option value="01">Janeiro</option>
                         <option value="02">Fevereiro</option>
                         <option value="03">Março</option>
@@ -66,14 +64,14 @@
                 <div class="select-options" id="expiration-year">
                     <span>Data Ano</span>
                     <select id="years">
-                        <option value="23">2023</option>
-                        <option value="24">2024</option>
-                        <option value="25">2025</option>
-                        <option value="26">2026</option>
-                        <option value="27">2027</option>
-                        <option value="28">2028</option>
-                        <option value="29">2029</option>
-                        <option value="30">2030</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
                     </select>
                 </div>
                 <div class="inputBox">
