@@ -92,6 +92,7 @@ body{
 .howItWorks .button:hover, .validator-container .button:hover{
     cursor: pointer;
     background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
+    letter-spacing: 2px;
     opacity: .8; /* altera a opacidade (esbranquiçado/claridade)*/
 }
 
@@ -139,8 +140,7 @@ label, span{
     display: block;
 }
 
-/* Cartão */
-
+/* Cartão parde da frente */
 .validator-container .card-container{
     margin-bottom: -150px;
     position: relative;
@@ -148,18 +148,26 @@ label, span{
     width: 450px;
 }
 
-.validator-container .card-container .front-card{
+.validator-container .card-container .front-card, .back-card{
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(206, 206, 206, 0.815);
     backface-visibility: hidden;
-    padding: 20px;
     text-transform: uppercase;
+    transition:transform .4s ease-out;
+}
+
+.validator-container .card-container .front-card{
+    transform:perspective(1000px) rotateY(0deg);
+}
+
+.validator-container .card-container .front-card{
+    padding: 20px;
 }
 
 .img-chip{
@@ -200,4 +208,39 @@ label, span{
 
 .mm-yy span{
     margin-top: 0px;
+}
+
+/* Cartão parte de trás*/
+
+.card-container .back-card{
+    transform:perspective(1000px) rotateY(180deg);
+}
+
+
+.back-card .black-stripe{
+    height: 45px;
+    width: 100%;
+    background-color: #141414;
+    margin-top: 25px;
+}
+
+.back-card .cvv-card{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: end; /* start (esquerda) end (direita)*/
+    padding: 0px 20px 0px;
+}
+
+.back-card .cvv-card span{
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.back-card .cvv-card .cvv-field {
+    height: 35px;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #4b4b4b;
 }

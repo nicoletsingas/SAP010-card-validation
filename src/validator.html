@@ -27,14 +27,19 @@
                             <span id="exp-mm">mm</span>
                             <span id="exp-yy">yy</span>
                         </div>
-                </div>
+                    </div>
                 </div>
             </div>
+            
             <div class="back-card">
-
+                <div class="black-stripe"></div>
+                <div class="cvv-card">
+                    <span>CVV</span>
+                    <div class="cvv-field"></div>
+                </div>
             </div>
         </div>
-        <form action="">
+        <form>
             <div class="inputBox">
                 <label for="card-number">Numero do Cartão:</label>
                 <input type="text" required maxlength="16" class="card-input" id="card-number-input">
@@ -45,7 +50,7 @@
             </div>
             <div class="flex-container">
                 <div class="select-options" id="expiration-mounth">
-                    <span>Data Mês</span>
+                    <span>Data Mês:</span>
                     <select id="mounths">
                         <option value="01">Janeiro</option>
                         <option value="02">Fevereiro</option>
@@ -62,7 +67,7 @@
                     </select>
                 </div>
                 <div class="select-options" id="expiration-year">
-                    <span>Data Ano</span>
+                    <span>Data Ano:</span>
                     <select id="years">
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
@@ -76,7 +81,7 @@
                 </div>
                 <div class="inputBox">
                     <label for="cvv-card">CVV:</label> 
-                    <input type="text" required maxlength="4" class="card-input" id="cvv-card">
+                    <input type="text" required maxlength="4" class="card-input" id="cvv-card-input">
                 </div>
             </div>
             <button id="btn-validator-card" class="button">Verificar Cartão</button>
