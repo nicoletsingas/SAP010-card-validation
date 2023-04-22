@@ -30,7 +30,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="back-card">
                 <div class="black-stripe"></div>
                 <div class="cvv-card">
@@ -39,14 +38,14 @@
                 </div>
             </div>
         </div>
-        <form>
+        <form id="form">
             <div class="inputBox">
                 <label for="card-number">Numero do Cartão:</label>
                 <input type="text" required maxlength="16" class="card-input" id="card-number-input">
             </div>
             <div class="inputBox">
                 <label for="card-name">Nome no Cartão:</label>
-                <input type="text" required maxlength="30" class="card-input" id="card-name-input">
+                <input type="text" maxlength="30" class="card-input" id="card-name-input">
             </div>
             <div class="flex-container">
                 <div class="select-options" id="expiration-mounth">
@@ -81,7 +80,7 @@
                 </div>
                 <div class="inputBox">
                     <label for="cvv-card">CVV:</label> 
-                    <input type="text" required maxlength="4" class="card-input" id="cvv-card-input">
+                    <input type="text" maxlength="4" class="card-input" id="cvv-card-input">
                 </div>
             </div>
             <button id="btn-validator-card" class="button">Verificar Cartão</button>

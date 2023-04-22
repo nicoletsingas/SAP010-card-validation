@@ -18,6 +18,8 @@ const expYearCard = document.querySelector('#exp-yy');
 const cvvInput = document.querySelector('#cvv-card-input');
 const cvvCard = document.querySelector('.cvv-field');
 
+const formSubmit = document.querySelector('#form');
+
 cardNumberInput.oninput = function (event){
     cardNumber.innerText = event.target.value //mostra o valor do input no campo do cartão
 };
@@ -38,6 +40,11 @@ cvvInput.oninput = function (e){
     cvvCard.innerText = e.target.value /* "e" de event*/
 };
 
+formSubmit.onsubmit = function (e){
+    let cardNumberToValidate = cardNumberInput.value //pegando valor do input e armazenando em uma variavel
+    validator.validateCardNumber(cardNumberToValidate) // chamar a função que esta na pagina validator.js e enviar o parametro
+};
+
 /* Animação rotação do cartão conforme passa o mouse em cima do input CVV*/
 cvvInput.onmouseenter = function (){
 	document.querySelector('.front-card').style.transform = 'perspective(1000px) rotateY(180deg)'
@@ -49,3 +56,4 @@ cvvInput.onmouseleave = function (){
 	document.querySelector('.front-card').style.transform = 'perspective(1000px) rotateY(0deg)'
 	document.querySelector('.back-card').style.transform = 'perspective(1000px) rotateY(180deg)'
 };
+
