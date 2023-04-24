@@ -163,7 +163,7 @@ label, span{
 }
 
 .validator-container .card-container .front-card{
-    transform:perspective(1000px) rotateY(0deg);
+    transform:rotateY(0deg);
 }
 
 .validator-container .card-container .front-card{
@@ -213,7 +213,7 @@ label, span{
 /* Cartão parte de trás*/
 
 .card-container .back-card{
-    transform:perspective(1000px) rotateY(180deg);
+    transform:rotateY(180deg);
 }
 
 
