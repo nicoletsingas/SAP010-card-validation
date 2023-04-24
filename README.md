@@ -16,7 +16,7 @@ Ao acessar o link do projeto o usuário visualizará a index.html que contém um
 A lógica utillizada para validar cartão foi "O algoritmo de Luhn"; Onde este pega os números do cartão informado, dobra os números de cada segundo digito (contando da direita para esquerda) e dobra seu valor.  Se o resultado dessa multiplicação for maior que o numero 9 ( por exemplo 16) este mesmo numero é divido em dois numeros diferentes e os soma (1 + 6 = 7) e so então soma todos os numeros do cartão. Se o resultado da soma terminar com 0 (ex: 80, 20, 40, 60) é um cartão válido, se não, será inválido.
 
 
-### 📎[Acesse aqui]()
+### 📎[Acesse aqui](https://nicoletsingas.github.io/SAP010-card-validation/)
 
 ![preview](./src/assets/index.html.png)
 <br>
