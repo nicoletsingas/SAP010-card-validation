@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root{
+    --colorBtn02: #0d687c;
+    --colorBtn01: #3f5eab;
+    --colorShadow: #fafafa;
+    /* --colorHoverBtn01:#ec3584c4;
+    --colorHoverBtn02:#00c1cfea; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* Página bem-vindo */
+
+.welcome-container, .validator-container{
+    width: 850px;
+    box-shadow: 5px 5px 15px rgb(175, 175, 175);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /*muda a direção dos itens de dentro*/
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.welcome-container .title {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+    justify-content: center;
+     /* background-color: blue;
+    border-radius: 10px;*/
+}
+
+.welcome-container .title h1{
+    padding: 10px;
+    font-weight: 400;
+}
+
+.icon {
+    height: 50px;
+}
+
+.howItWorks h2{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.howItWorks p{
+    margin-bottom: 10px;
+}
+
+.howItWorks .div-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.howItWorks  a{
+    text-decoration: none;
+    width: 60%;
+}
+
+.howItWorks .button, .validator-container .button{
+    background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+.howItWorks .button:hover, .validator-container .button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
+    letter-spacing: 2px;
+    opacity: .8; /* altera a opacidade (esbranquiçado/claridade)*/
+}
+
+/* Página Validador Cartão*/
+
+.validator-container form {
+    width: 80%;
+    padding-top: 160px;
+}
+
+.validator-container .inputBox label, .select-options label, span{
+    color: #999;
+    margin-bottom: 5px;
+    display: block;
+}
+
+label, span{
+    margin-top: 20px;
+}
+
+.validator-container .button{
+    margin-top: 40px;
+}
+
+.validator-container .inputBox input, select{
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #999;
+    color: #4b4b4b;
+    font-size: 16px;
+    outline: none;
+}
+
+.validator-container form .flex-container{ 
+    display: flex; 
+    gap: 15px; 
+}
+
+.validator-container form .flex-container .select-options{
+    flex: 1 1 150px; /* 1 fração para cada elemento e o resto 150px*/
+}
+
+ .select-options label {
+    display: block;
+}
+
+/* Cartão parde da frente */
+.validator-container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 450px;
+}
+
+.validator-container .card-container .front-card, .back-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(206, 206, 206, 0.815);
+    backface-visibility: hidden;
+    text-transform: uppercase;
+    transition:transform .4s ease-out;
+}
+
+.validator-container .card-container .front-card{
+    transform:rotateY(0deg);
+}
+
+.validator-container .card-container .front-card{
+    padding: 20px;
+}
+
+.img-chip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.validator-container .card-container .front-card .imagem-chip{
+    height: 70px;
+    width: 70px;
+}
+
+.validator-container .card-container .front-card .card-number{
+    padding: 10px 0px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.validator-container .card-container .front-card .flex-card, .mm-yy{
+    display: flex;
+    gap: 15px;
+}
+
+.validator-container .card-container .front-card .flex-card .card-name-field:nth-child(1){
+    margin-right: auto;
+}
+
+.validator-container .card-container .front-card .flex-card .card-name-field {
+    font-size: 16px;
+    color: #fff;
+}
+
+.validator-container .card-container .front-card .flex-card span{
+    color: #fff;
+}
+
+.mm-yy span{
+    margin-top: 0px;
+}
+
+/* Cartão parte de trás*/
+
+.card-container .back-card{
+    transform:rotateY(180deg);
+}
+
+
+.back-card .black-stripe{
+    height: 45px;
+    width: 100%;
+    background-color: #141414;
+    margin-top: 25px;
+}
+
+.back-card .cvv-card{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: end; /* start (esquerda) end (direita)*/
+    padding: 0px 20px 0px;
+}
+
+.back-card .cvv-card span{
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.back-card .cvv-card .cvv-field {
+    height: 35px;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #4b4b4b;
+}
