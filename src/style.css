@@ -4,8 +4,6 @@
     --colorBtn02: #0d687c;
     --colorBtn01: #3f5eab;
     --colorShadow: #fafafa;
-    /* --colorHoverBtn01:#ec3584c4;
-    --colorHoverBtn02:#00c1cfea; */
 }
 
 *{
@@ -26,14 +24,12 @@ body{
     font-size: 16px;
 }
 
-/* Página bem-vindo */
-
 .welcome-container, .validator-container{
     width: 850px;
     box-shadow: 5px 5px 15px rgb(175, 175, 175);
     border-radius: 10px;
     display: flex;
-    flex-direction: column; /*muda a direção dos itens de dentro*/
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px;
@@ -45,8 +41,6 @@ body{
     width: 100%;
     margin-bottom: 40px;
     justify-content: center;
-     /* background-color: blue;
-    border-radius: 10px;*/
 }
 
 .welcome-container .title h1{
@@ -93,10 +87,8 @@ body{
     cursor: pointer;
     background-image: linear-gradient(to right, var(--colorBtn02), var(--colorBtn01));
     letter-spacing: 2px;
-    opacity: .8; /* altera a opacidade (esbranquiçado/claridade)*/
+    opacity: .8;
 }
-
-/* Página Validador Cartão*/
 
 .validator-container form {
     width: 80%;
@@ -209,8 +201,6 @@ label, span{
 .mm-yy span{
     margin-top: 0px;
 }
-
-/* Cartão parte de trás*/
 
 .card-container .back-card{
     transform:rotateY(180deg);
